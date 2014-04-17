@@ -19,6 +19,10 @@
 		B7C2B6D018FF52900082EC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C2B6B818FF52900082EC59 /* UIKit.framework */; };
 		B7C2B6D818FF52900082EC59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7C2B6D618FF52900082EC59 /* InfoPlist.strings */; };
 		B7C2B6DA18FF52900082EC59 /* MyTodoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6D918FF52900082EC59 /* MyTodoListTests.m */; };
+		B7C2B6E418FF53920082EC59 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C2B6E318FF53920082EC59 /* MainStoryboard.storyboard */; };
+		B7C2B6E718FF56280082EC59 /* KBSTodoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6E618FF56280082EC59 /* KBSTodoListTableViewController.m */; };
+		B7C2B6EA18FF588A0082EC59 /* KBSTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6E918FF588A0082EC59 /* KBSTodoItem.m */; };
+		B7C2B6ED18FF631B0082EC59 /* KBSTodoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6EC18FF631B0082EC59 /* KBSTodoItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		B7C2B6D518FF52900082EC59 /* MyTodoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTodoListTests-Info.plist"; sourceTree = "<group>"; };
 		B7C2B6D718FF52900082EC59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7C2B6D918FF52900082EC59 /* MyTodoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTodoListTests.m; sourceTree = "<group>"; };
+		B7C2B6E318FF53920082EC59 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B7C2B6E518FF56280082EC59 /* KBSTodoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSTodoListTableViewController.h; sourceTree = "<group>"; };
+		B7C2B6E618FF56280082EC59 /* KBSTodoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSTodoListTableViewController.m; sourceTree = "<group>"; };
+		B7C2B6E818FF588A0082EC59 /* KBSTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSTodoItem.h; sourceTree = "<group>"; };
+		B7C2B6E918FF588A0082EC59 /* KBSTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSTodoItem.m; sourceTree = "<group>"; };
+		B7C2B6EB18FF631B0082EC59 /* KBSTodoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSTodoItemViewController.h; sourceTree = "<group>"; };
+		B7C2B6EC18FF631B0082EC59 /* KBSTodoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSTodoItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +122,13 @@
 				B7C2B6C418FF52900082EC59 /* KBSAppDelegate.m */,
 				B7C2B6C618FF52900082EC59 /* Images.xcassets */,
 				B7C2B6BB18FF52900082EC59 /* Supporting Files */,
+				B7C2B6E318FF53920082EC59 /* MainStoryboard.storyboard */,
+				B7C2B6E518FF56280082EC59 /* KBSTodoListTableViewController.h */,
+				B7C2B6E618FF56280082EC59 /* KBSTodoListTableViewController.m */,
+				B7C2B6E818FF588A0082EC59 /* KBSTodoItem.h */,
+				B7C2B6E918FF588A0082EC59 /* KBSTodoItem.m */,
+				B7C2B6EB18FF631B0082EC59 /* KBSTodoItemViewController.h */,
+				B7C2B6EC18FF631B0082EC59 /* KBSTodoItemViewController.m */,
 			);
 			path = MyTodoList;
 			sourceTree = "<group>";
@@ -220,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C2B6E418FF53920082EC59 /* MainStoryboard.storyboard in Resources */,
 				B7C2B6BF18FF52900082EC59 /* InfoPlist.strings in Resources */,
 				B7C2B6C718FF52900082EC59 /* Images.xcassets in Resources */,
 			);
@@ -241,7 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C2B6C118FF52900082EC59 /* main.m in Sources */,
+				B7C2B6EA18FF588A0082EC59 /* KBSTodoItem.m in Sources */,
+				B7C2B6ED18FF631B0082EC59 /* KBSTodoItemViewController.m in Sources */,
 				B7C2B6C518FF52900082EC59 /* KBSAppDelegate.m in Sources */,
+				B7C2B6E718FF56280082EC59 /* KBSTodoListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
