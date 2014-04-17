@@ -23,6 +23,7 @@
 		B7C2B6E718FF56280082EC59 /* KBSTodoListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6E618FF56280082EC59 /* KBSTodoListTableViewController.m */; };
 		B7C2B6EA18FF588A0082EC59 /* KBSTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6E918FF588A0082EC59 /* KBSTodoItem.m */; };
 		B7C2B6ED18FF631B0082EC59 /* KBSTodoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C2B6EC18FF631B0082EC59 /* KBSTodoItemViewController.m */; };
+		B7CA970618FF7A9900B25FB8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = B7CA970518FF7A9900B25FB8 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B7C2B6E918FF588A0082EC59 /* KBSTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSTodoItem.m; sourceTree = "<group>"; };
 		B7C2B6EB18FF631B0082EC59 /* KBSTodoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBSTodoItemViewController.h; sourceTree = "<group>"; };
 		B7C2B6EC18FF631B0082EC59 /* KBSTodoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBSTodoItemViewController.m; sourceTree = "<group>"; };
+		B7CA970518FF7A9900B25FB8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		B7C2B6A818FF52900082EC59 = {
 			isa = PBXGroup;
 			children = (
+				B7CA970518FF7A9900B25FB8 /* README */,
 				B7C2B6BA18FF52900082EC59 /* MyTodoList */,
 				B7C2B6D318FF52900082EC59 /* MyTodoListTests */,
 				B7C2B6B318FF52900082EC59 /* Frameworks */,
@@ -238,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CA970618FF7A9900B25FB8 /* README in Resources */,
 				B7C2B6E418FF53920082EC59 /* MainStoryboard.storyboard in Resources */,
 				B7C2B6BF18FF52900082EC59 /* InfoPlist.strings in Resources */,
 				B7C2B6C718FF52900082EC59 /* Images.xcassets in Resources */,
@@ -460,6 +464,7 @@
 				B7C2B6DF18FF52900082EC59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7C2B6E018FF52900082EC59 /* Build configuration list for PBXNativeTarget "MyTodoListTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +473,7 @@
 				B7C2B6E218FF52900082EC59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
