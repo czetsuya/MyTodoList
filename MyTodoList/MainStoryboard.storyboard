@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Todo List Table View Controller-->
+        <!--Todo List Table View Controller - Todo Items-->
         <scene sceneID="xpw-vU-IUi">
             <objects>
                 <tableViewController id="bRd-dd-gVX" customClass="KBSTodoListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TKe-02-Bcj">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TKe-02-Bcj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,19 +37,28 @@
                             <outlet property="delegate" destination="bRd-dd-gVX" id="NJ1-fh-A1G"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2rH-IO-rPS">
+                    <navigationItem key="navigationItem" title="Todo Items" id="2rH-IO-rPS">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="F4i-Ov-Mid">
+                            <connections>
+                                <action selector="enterEditMode:" destination="bRd-dd-gVX" id="SSY-cS-hsw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6Wc-Ty-VOB">
                             <connections>
                                 <segue destination="z9U-lX-JNG" kind="modal" id="lrT-OD-u4w"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="6Wc-Ty-VOB" id="e5G-3w-jfs"/>
+                        <outlet property="editButton" destination="F4i-Ov-Mid" id="NpK-xu-lbE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XiX-tn-r99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1643" y="24"/>
         </scene>
-        <!--Todo Item View Controller-->
+        <!--Todo Item View Controller - Add Todo-->
         <scene sceneID="zAV-fi-pU1">
             <objects>
                 <viewController id="BMu-P2-5fP" customClass="KBSTodoItemViewController" sceneMemberID="viewController">
@@ -75,7 +84,7 @@
                             <constraint firstItem="20S-Vx-qIs" firstAttribute="leading" secondItem="g3z-Fh-hMr" secondAttribute="leading" constant="20" id="OTS-oL-qBY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m8a-uK-Jef">
+                    <navigationItem key="navigationItem" title="Add Todo" id="m8a-uK-Jef">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dfe-qe-gHV">
                             <connections>
                                 <segue destination="fOm-Sg-YH6" kind="unwind" unwindAction="unwindToList:" id="ayS-gD-Q25"/>

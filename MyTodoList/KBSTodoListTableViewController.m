@@ -12,6 +12,9 @@
 
 @interface KBSTodoListTableViewController ()
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
+
 @end
 
 @implementation KBSTodoListTableViewController
@@ -95,27 +98,31 @@
     return cell;
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            return NO;
+        }
+    }
     return YES;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"remove row");
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [self.todoItems removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
+    NSLog(@"array length=%lu", (unsigned long)[self.todoItems count]);
 }
-*/
 
 /*
 // Override to support rearranging the table view.
@@ -133,7 +140,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -142,7 +148,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 - (IBAction)unwindToList:(UIStoryboardSegue *) seque
 {
@@ -158,11 +163,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    KBSTodoItem *item = [self.todoItems objectAtIndex:indexPath.row];
-    [item markAsCompleted];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    if(![cell isEditing]) {
+        KBSTodoItem *item = [self.todoItems objectAtIndex:indexPath.row];
+        [item markAsCompleted];
+        
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
+}
+
+- (IBAction)enterEditMode:(id)sender
+{
+    if ([self.tableView isEditing]) {
+        // If the tableView is already in edit mode, turn it off. Also change the title of the button to reflect the intended verb (‘Edit’, in this case).]
+        [self.tableView setEditing:NO animated:YES];
+        [self.editButton setTitle:@"Edit"];
+        [self.addButton setEnabled:YES];
+    }
+    else {
+        [self.tableView setEditing:YES animated:YES];
+        [self.editButton setTitle:@"Done"];
+        [self.addButton setEnabled:NO];
+    }
 }
 
 @end
